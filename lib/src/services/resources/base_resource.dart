@@ -1,9 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart';
-
-import '../../entities/api_response_model.dart';
-import '../../entities/category.dart';
+import 'package:shopware_sdk/shopware_sdk.dart';
 
 abstract class BaseResource<T> {
   BaseClient client;
@@ -40,8 +38,4 @@ abstract class BaseResource<T> {
       });
 }
 
-class CategoriesResource extends BaseResource<Category> {
-  String _queryPath = '/categories';
 
-  CategoriesResource(BaseClient client) : super(client);
-}

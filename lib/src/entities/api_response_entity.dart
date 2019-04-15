@@ -2,14 +2,7 @@ import 'dart:mirrors';
 
 import 'package:http/http.dart';
 
-abstract class Entity {
-  Entity();
-
-  factory Entity.fromJson(Map<String, dynamic> json) {}
-
-  Map<String, dynamic> toJson();
-}
-
+/// Wrapped Response
 class ApiResponse<T> {
   T entity;
   List<T> entities;

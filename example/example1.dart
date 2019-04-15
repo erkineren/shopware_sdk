@@ -1,7 +1,5 @@
 import 'package:shopware_sdk/shopware_sdk.dart';
-import 'package:shopware_sdk/src/entities/api_response_model.dart';
-import 'package:shopware_sdk/src/entities/category.dart';
-import 'package:shopware_sdk/src/services/resources/base_resource.dart';
+
 
 import 'example-constants.dart';
 

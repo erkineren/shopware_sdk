@@ -4,8 +4,5 @@ version: 0.0.1
 homepage: https://github.com/marcoesposito1988/http_auth
 author: Erkin <ernerkin@gmail.com>
 
-environment:
-  sdk: '>=2.0.0 <3.0.0'
-
 dependencies:
   http: ^0.12.0+2
