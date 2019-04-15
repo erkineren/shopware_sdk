@@ -17,6 +17,15 @@ main() async {
   // Get category with id 39
   ApiResponse<Category> apiResponse = await categoryResource.findOne(39);
 
+  // or use it with then
+  categoryResource.findOne(39).then((apiResponse) {
+    if (apiResponse.success) {
+      print(apiResponse.entity);
+    } else {
+      print(apiResponse.message);
+    }
+  });
+
   // if api response successfully returned
   if (apiResponse.success) {
 
