@@ -77,41 +77,44 @@ class Category {
     this.articleCount,
   });
 
-  factory Category.fromJson(Map<String, dynamic> json) => new Category(
-        sortingIds: json["sortingIds"],
-        hideSortings: json["hideSortings"],
-        facetIds: json["facetIds"],
-        id: json["id"],
-        parentId: json["parentId"],
-        streamId: json["streamId"],
-        name: json["name"],
-        position: json["position"],
-        metaTitle: json["metaTitle"],
-        metaKeywords: json["metaKeywords"],
-        metaDescription: json["metaDescription"],
-        cmsHeadline: json["cmsHeadline"],
-        cmsText: json["cmsText"],
-        active: json["active"],
-        template: json["template"],
-        productBoxLayout: json["productBoxLayout"],
-        blog: json["blog"],
-        path: json["path"],
-        categoryExternal: json["external"],
-        externalTarget: json["externalTarget"],
-        hideFilter: json["hideFilter"],
-        hideTop: json["hideTop"],
-        changed: json["changed"],
-        added: json["added"],
-        mediaId: json["mediaId"],
-        attribute: Attribute.fromJson(json["attribute"]),
-        emotions:
-            json["emotions"] == null ? null : new List<Emotion>.from(json["emotions"].map((x) => Emotion.fromJson(x))),
-        media: json["media"],
-        customerGroups:
-            json["customerGroups"] == null ? null : new List<dynamic>.from(json["customerGroups"].map((x) => x)),
-        childrenCount: json["childrenCount"],
-        articleCount: json["articleCount"],
-      );
+  factory Category.fromJson(Map<String, dynamic> json) => json == null
+      ? null
+      : new Category(
+          sortingIds: json["sortingIds"],
+          hideSortings: json["hideSortings"],
+          facetIds: json["facetIds"],
+          id: json["id"],
+          parentId: json["parentId"],
+          streamId: json["streamId"],
+          name: json["name"],
+          position: json["position"],
+          metaTitle: json["metaTitle"],
+          metaKeywords: json["metaKeywords"],
+          metaDescription: json["metaDescription"],
+          cmsHeadline: json["cmsHeadline"],
+          cmsText: json["cmsText"],
+          active: json["active"],
+          template: json["template"],
+          productBoxLayout: json["productBoxLayout"],
+          blog: json["blog"],
+          path: json["path"],
+          categoryExternal: json["external"],
+          externalTarget: json["externalTarget"],
+          hideFilter: json["hideFilter"],
+          hideTop: json["hideTop"],
+          changed: json["changed"],
+          added: json["added"],
+          mediaId: json["mediaId"],
+          attribute: Attribute.fromJson(json["attribute"]),
+          emotions: json["emotions"] == null
+              ? null
+              : new List<Emotion>.from(json["emotions"].map((x) => Emotion.fromJson(x))),
+          media: json["media"],
+          customerGroups:
+              json["customerGroups"] == null ? null : new List<dynamic>.from(json["customerGroups"].map((x) => x)),
+          childrenCount: json["childrenCount"],
+          articleCount: json["articleCount"],
+        );
 
   Map<String, dynamic> toJson() => {
         "sortingIds": sortingIds,
