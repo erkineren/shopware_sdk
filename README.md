@@ -1,5 +1,6 @@
 
 [![pub package](https://img.shields.io/pub/v/shopware_sdk.svg)](https://pub.dartlang.org/packages/shopware_sdk)
+[![Build Status](https://travis-ci.org/erkineren/shopware_sdk.svg?branch=master)](https://travis-ci.org/erkineren/shopware_sdk)
 
 # shopware_sdk
 
