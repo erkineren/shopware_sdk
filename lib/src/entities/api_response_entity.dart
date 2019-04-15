@@ -1,6 +1,7 @@
-import 'dart:mirrors';
+//import 'dart:mirrors';
 
 import 'package:http/http.dart';
+import 'package:shopware_sdk/src/entities/category.dart';
 
 /// Wrapped Response
 class ApiResponse<T> {
@@ -38,12 +39,18 @@ class ApiResponse<T> {
      */
     var entities = List<T>();
 
-    try {
-      ClassMirror mirror = reflectClass(T);
+    if(T == Category){
       entities = data.map((a) {
-        return mirror.newInstance(const Symbol('fromJson'), [a]).reflectee as T;
+        return Category.fromJson(a) as T;
       }).toList();
-    } catch (e) {}
+    }
+
+//    try {
+//      ClassMirror mirror = reflectClass(T);
+//      entities = data.map((a) {
+//        return mirror.newInstance(const Symbol('fromJson'), [a]).reflectee as T;
+//      }).toList();
+//    } catch (e) {}
 
     /**
      *
@@ -66,17 +73,17 @@ class ApiResponse<T> {
         "message": message,
       };
 
-  List<T> createEntitiesFromJson<T>(List<dynamic> data) {
-    ClassMirror mirror = reflectClass(T);
-    return data.map((entity) {
-      return mirror.newInstance(const Symbol('fromJson'), [entity]).reflectee as T;
-    }).toList();
-  }
-
-  T createEntityFromJson<T>(Map<String, dynamic> data) {
-    ClassMirror mirror = reflectClass(T);
-    return mirror.newInstance(const Symbol('fromJson'), [data]).reflectee as T;
-  }
+//  List<T> createEntitiesFromJson<T>(List<dynamic> data) {
+//    ClassMirror mirror = reflectClass(T);
+//    return data.map((entity) {
+//      return mirror.newInstance(const Symbol('fromJson'), [entity]).reflectee as T;
+//    }).toList();
+//  }
+//
+//  T createEntityFromJson<T>(Map<String, dynamic> data) {
+//    ClassMirror mirror = reflectClass(T);
+//    return mirror.newInstance(const Symbol('fromJson'), [data]).reflectee as T;
+//  }
 
   @override
   String toString() {
