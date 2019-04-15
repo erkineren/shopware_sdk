@@ -5,7 +5,7 @@ homepage: https://github.com/marcoesposito1988/http_auth
 author: Erkin Eren <eren@erkin.net>
 
 environment:
-  sdk: '>=2.0.0 <3.0.0'
+  sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
   http: ^0.12.0+2
