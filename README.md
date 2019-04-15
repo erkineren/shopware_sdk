@@ -3,7 +3,7 @@
 
 # shopware_sdk
 
-A Dart SDK for the Shopware 5 REST API.
+Future-based Dart SDK for the Shopware 5 REST API.
 
 ## Usage
 
