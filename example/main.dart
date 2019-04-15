@@ -1,6 +1,8 @@
 import 'package:shopware_sdk/shopware_sdk.dart';
 
-import 'example-constants.dart';
+const String BASE_URL = 'http://shopware.dev/api/';
+const String USERNAME = 'user';
+const String API_TOKEN = 'api_key';
 
 main() async {
   // Create a new client
