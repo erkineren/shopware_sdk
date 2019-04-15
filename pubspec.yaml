@@ -1,6 +1,6 @@
 name: shopware_sdk
 description: Dart SDK for the Shopware 5 REST API.
-version: 0.1.0+1
+version: 0.1.0+2
 homepage: https://github.com/erkineren/shopware_sdk
 author: Erkin Eren <eren@erkin.net>
 
