@@ -17,21 +17,18 @@ main() async {
   // Get category with id 39
   ApiResponse<Category> apiResponse = await categoryResource.findOne(39);
 
+  // if api response successfully returned
   if (apiResponse.success) {
-    // if api response successfully returned
 
     var category = apiResponse.entity;
 
     print("${category.id} - ${category.name}");
 
-    // print category entity
-    print(category);
-
-    // print returned api response
+    // you can direct access to json response returned from shopware api
     print(apiResponse.jsonResponse);
+
   } else {
     // print error message
-
     print(apiResponse.message);
     print(apiResponse.baseResponse.statusCode);
   }
