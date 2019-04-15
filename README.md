@@ -1,4 +1,6 @@
 
+[![pub package](https://img.shields.io/pub/v/http.svg)](https://pub.dartlang.org/packages/shopware_sdk)
+
 # shopware_sdk
 
 A Dart SDK for the Shopware 5 REST API.
