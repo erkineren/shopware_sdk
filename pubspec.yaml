@@ -1,8 +1,11 @@
 name: shopware_sdk
-description: Dart shopware rest api client
-version: 0.0.1
+description: Dart SDK for the Shopware 5 REST API.
+version: 0.1.0
 homepage: https://github.com/marcoesposito1988/http_auth
-author: Erkin <ernerkin@gmail.com>
+author: Erkin Eren <eren@erkin.net>
+
+environment:
+  sdk: '>=2.0.0 <3.0.0'
 
 dependencies:
   http: ^0.12.0+2
