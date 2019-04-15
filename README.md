@@ -1,5 +1,5 @@
 
-[![pub package](https://img.shields.io/pub/v/http.svg)](https://pub.dartlang.org/packages/shopware_sdk)
+[![pub package](https://img.shields.io/pub/v/shopware_sdk.svg)](https://pub.dartlang.org/packages/shopware_sdk)
 
 # shopware_sdk
 
