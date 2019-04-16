@@ -1,9 +1,10 @@
 name: shopware_sdk
-version: 0.1.0+8
+version: 0.1.0+9
 author: Erkin Eren <eren@erkin.net>
 homepage: https://github.com/erkineren/shopware_sdk
 repository: https://github.com/erkineren/shopware_sdk
-description: Future-based Dart SDK for the Shopware 5 REST API.
+description: >-
+  A composable, cross-platform, Future-based Dart SDK for the Shopware 5 REST API.
 
 
 environment:

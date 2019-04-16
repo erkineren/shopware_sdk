@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:shopware_sdk/src/entities/api_response_entity.dart';
+
 Category categoryFromJson(String str) {
   final jsonData = json.decode(str);
   return Category.fromJson(jsonData);
@@ -10,7 +12,7 @@ String categoryToJson(Category data) {
   return json.encode(dyn);
 }
 
-class Category {
+class Category extends BaseEntity{
   String sortingIds;
   bool hideSortings;
   String facetIds;
