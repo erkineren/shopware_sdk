@@ -11,14 +11,21 @@ class ShopwareClient extends BaseClient {
   final Client _inner;
   final String _authString;
 
-  ShopwareClient({@required this.baseUrl, @required this.username, @required this.apiToken, inner})
+  ShopwareClient(
+      {@required this.baseUrl,
+      @required this.username,
+      @required this.apiToken,
+      inner})
       : _authString = _getAuthString(username, apiToken),
         _inner = inner == null ? new Client() : inner {
-    baseUrl = baseUrl.endsWith('/') ? baseUrl.substring(0, baseUrl.length - 1) : baseUrl;
+    baseUrl = baseUrl.endsWith('/')
+        ? baseUrl.substring(0, baseUrl.length - 1)
+        : baseUrl;
   }
 
   static String _getAuthString(username, password) {
-    return 'Basic ' + base64.encode(latin1.encode('${username}:${password}')).trim();
+    return 'Basic ' +
+        base64.encode(latin1.encode('${username}:${password}')).trim();
   }
 
   _setAuthString(BaseRequest request) {
@@ -26,7 +33,8 @@ class ShopwareClient extends BaseClient {
   }
 
   Future<StreamedResponse> send(BaseRequest request) async {
-    var newRequest = Request(request.method, Uri.parse(baseUrl + request.url.toString()));
+    var newRequest =
+        Request(request.method, Uri.parse(baseUrl + request.url.toString()));
     newRequest.headers.addAll(request.headers);
     _setAuthString(newRequest);
 

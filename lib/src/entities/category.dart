@@ -12,7 +12,7 @@ String categoryToJson(Category data) {
   return json.encode(dyn);
 }
 
-class Category extends BaseEntity{
+class Category extends BaseEntity {
   String sortingIds;
   bool hideSortings;
   String facetIds;
@@ -110,10 +110,12 @@ class Category extends BaseEntity{
           attribute: Attribute.fromJson(json["attribute"]),
           emotions: json["emotions"] == null
               ? null
-              : new List<Emotion>.from(json["emotions"].map((x) => Emotion.fromJson(x))),
+              : new List<Emotion>.from(
+                  json["emotions"].map((x) => Emotion.fromJson(x))),
           media: json["media"],
-          customerGroups:
-              json["customerGroups"] == null ? null : new List<dynamic>.from(json["customerGroups"].map((x) => x)),
+          customerGroups: json["customerGroups"] == null
+              ? null
+              : new List<dynamic>.from(json["customerGroups"].map((x) => x)),
           childrenCount: json["childrenCount"],
           articleCount: json["articleCount"],
         );

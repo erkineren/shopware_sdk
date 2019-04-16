@@ -431,7 +431,8 @@ class Attribute {
         swagTrustedRange: json["swagTrustedRange"],
         swagTrustedDuration: json["swagTrustedDuration"],
         pickwareIncomingStock: json["pickwareIncomingStock"],
-        pickwareStockManagementDisabled: json["pickwareStockManagementDisabled"],
+        pickwareStockManagementDisabled:
+            json["pickwareStockManagementDisabled"],
         connectProductDescription: json["connectProductDescription"],
         connectArticleShipping: json["connectArticleShipping"],
         connectMappedCategory: json["connectMappedCategory"],
@@ -458,14 +459,17 @@ class Attribute {
         connectPropertyGroup: json["connectPropertyGroup"],
         amazonpreis: json["amazonpreis"],
         viisonMoss: json["viisonMoss"],
-        viisonOtherServiceParagraphOneOrTwo: json["viisonOtherServiceParagraphOneOrTwo"],
+        viisonOtherServiceParagraphOneOrTwo:
+            json["viisonOtherServiceParagraphOneOrTwo"],
         viisonDatevCostCenter: json["viisonDatevCostCenter"],
         pickwareStockInitialized: json["pickwareStockInitialized"],
-        pickwareStockInitializationTime: json["pickwareStockInitializationTime"],
+        pickwareStockInitializationTime:
+            json["pickwareStockInitializationTime"],
         favori: json["favori"],
         dreiscFacebookImage: json["dreiscFacebookImage"],
         dreiscTwitterImage: json["dreiscTwitterImage"],
-        pickwareWmsInternalPickingInstructions: json["pickwareWmsInternalPickingInstructions"],
+        pickwareWmsInternalPickingInstructions:
+            json["pickwareWmsInternalPickingInstructions"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -527,14 +531,16 @@ class Attribute {
         "connectPropertyGroup": connectPropertyGroup,
         "amazonpreis": amazonpreis,
         "viisonMoss": viisonMoss,
-        "viisonOtherServiceParagraphOneOrTwo": viisonOtherServiceParagraphOneOrTwo,
+        "viisonOtherServiceParagraphOneOrTwo":
+            viisonOtherServiceParagraphOneOrTwo,
         "viisonDatevCostCenter": viisonDatevCostCenter,
         "pickwareStockInitialized": pickwareStockInitialized,
         "pickwareStockInitializationTime": pickwareStockInitializationTime,
         "favori": favori,
         "dreiscFacebookImage": dreiscFacebookImage,
         "dreiscTwitterImage": dreiscTwitterImage,
-        "pickwareWmsInternalPickingInstructions": pickwareWmsInternalPickingInstructions,
+        "pickwareWmsInternalPickingInstructions":
+            pickwareWmsInternalPickingInstructions,
       };
 
   @override

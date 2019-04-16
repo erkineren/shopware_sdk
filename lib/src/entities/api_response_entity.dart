@@ -1,7 +1,6 @@
 //import 'dart:mirrors';
 
 import 'package:http/http.dart';
-import 'package:shopware_sdk/src/entities/category.dart';
 
 class BaseEntity {}
 
@@ -19,9 +18,19 @@ class ApiResponse<T extends BaseEntity> {
   /// inner data entity fromJson method pass from resource
   BaseEntity Function(Object) fromJson;
 
-  ApiResponse({this.entity, this.entities, this.total, this.success, this.message, this.jsonResponse, this.fromJson});
+  /// Constructor
+  ApiResponse(
+      {this.entity,
+      this.entities,
+      this.total,
+      this.success,
+      this.message,
+      this.jsonResponse,
+      this.fromJson});
 
-  factory ApiResponse.fromJson(Map<String, dynamic> json, BaseEntity fromJson(Object o)) {
+  /// Factory Constructor from Json
+  factory ApiResponse.fromJson(
+      Map<String, dynamic> json, BaseEntity fromJson(Object o)) {
     if (json == null) return null;
 
     /// Check json data value is whether JSON Object or JSON Array ?

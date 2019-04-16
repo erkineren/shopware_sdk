@@ -21,7 +21,8 @@ abstract class BaseResource<T extends BaseEntity> {
   /// Finds all entities.
   Future<ApiResponse<T>> findAll({Map<String, String> headers}) =>
       client.get(queryPath, headers: headers).then((response) {
-        var apiResponse = ApiResponse<T>.fromJson(json.decode(response.body), fromJson);
+        var apiResponse =
+            ApiResponse<T>.fromJson(json.decode(response.body), fromJson);
         apiResponse.baseResponse = response;
         return apiResponse;
       });
@@ -29,7 +30,8 @@ abstract class BaseResource<T extends BaseEntity> {
   /// Finds entity by its id.
   Future<ApiResponse<T>> findOne(int id, {Map<String, String> headers}) =>
       client.get('$queryPath/$id', headers: headers).then((response) {
-        var apiResponse = ApiResponse<T>.fromJson(json.decode(response.body), fromJson);
+        var apiResponse =
+            ApiResponse<T>.fromJson(json.decode(response.body), fromJson);
         apiResponse.baseResponse = response;
         return apiResponse;
       });
