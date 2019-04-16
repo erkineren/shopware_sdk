@@ -16,8 +16,13 @@ Future-based Dart SDK for the Shopware 5 REST API.
    const String API_TOKEN = 'api_key';
    
    main() async {
+     
      // Create a new client
-     var client = ShopwareClient(baseUrl: BASE_URL, username: USERNAME, apiToken: API_TOKEN);
+     var client = ShopwareClient(
+           baseUrl: BASE_URL,
+           username: USERNAME,
+           apiToken: API_TOKEN
+       );
    
      var categoryResource = new CategoriesResource(client);
    
